@@ -7,6 +7,17 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
+    <div className="min-h-screen flex items-center justify-center bg-slate-900">
+      <h1 className="text-4xl font-bold text-slate-100">
+        Tailwind test
+      </h1>
+    </div>
+  );
+
+
+//export default App;
+
+  /*return (
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -29,7 +40,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  )*/
 }
 
 export default App
