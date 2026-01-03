@@ -30,21 +30,20 @@ const bgColorMap: Record<string, string> = {
     bpurple: "border-purple-900",
     borange: "border-orange-900"
 };
+
 interface BookProps {
     title: string;
     color: string;
-    content: string;
 }
 
-export const Book: React.FC<BookProps> = ({
+const Book: React.FC<BookProps> = ({
     title,
-    color,
-    content,
+    color
 }) => {
 
 
     return (
-        <div className={"bg-white flex pr-1 pt-1 shadow-md rounded h-96 w-72 border-2 border-solid " + bgColorMap["b" + color]}>
+        <div className={"bg-white flex pr-1 pt-1 shadow-md rounded h-96 w-72 border-2 border-solid m-1 " + bgColorMap["b" + color]}>
             <div className={"w-5 h-full " + bgColorMap["d"+color]}></div>
             <div className={"rounded-r flex flex-wrap h-full flex-grow " + bgColorMap[color]}>
 
