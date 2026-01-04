@@ -2,13 +2,15 @@
 import './App.css';
 import Book from './components/Book.tsx';
 import OpenBook from './components/OpenBook.tsx';
+import Shelf from './components/Shelf.tsx';
 
 function App() {
 
   return (
-    <div>
-        <Book title={"the Secret Garden"} color={"yellow"}/>
-        <OpenBook content={"idk gardens are cool"} title={"the Secret Garden"}  color={"purple"}/>
+    <div className={"w-full h-full bg-green-400"}>
+      <Shelf></Shelf>
+      <Shelf></Shelf>
+      <Shelf></Shelf>
 
     </div>
   );
