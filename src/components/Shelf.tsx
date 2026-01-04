@@ -1,5 +1,6 @@
 import React from 'react';
 import Book from './Book';
+import BookSpine from './BookSpine';
 
 interface OpenBookProps {
     title: string;
@@ -15,6 +16,7 @@ const Shelf: React.FC = () => {
                 <Book title={"The Little Princess"} color={"pink"}></Book>
                 <Book title={"Peter Pan"} color={"blue"}></Book>
                 <Book title={"Harry potter and the goblet of fire"} color={"yellow"}></Book>
+                <BookSpine title={"great gatsby"} color={"purple"}></BookSpine>
                 <div className={"max-w-screen-lg w-screen h-8 rounded bg-brown-400 mb-5"}></div>
             </div>
         </div>
