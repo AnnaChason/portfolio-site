@@ -31,6 +31,14 @@ const ColorMap: Record<string, string> = {
     torange: "text-orange-900",
     tpink: "text-pink-900",
 
+    dtblue: "text-blue-300",
+    dtred: "text-red-300",
+    dtgreen: "text-green-300",
+    dtyellow: "text-yellow-300",
+    dtpurple: "text-purple-300",
+    dtorange: "text-orange-300",
+    dtpink: "text-pink-300",
+
     bblue: "border-blue-900",
     bred: "border-red-900",
     bgreen: "border-green-900",
@@ -38,5 +46,7 @@ const ColorMap: Record<string, string> = {
     bpurple: "border-purple-900",
     borange: "border-orange-900",
     bpink: "border-purple-900",
+
+
 };
 export default ColorMap;
