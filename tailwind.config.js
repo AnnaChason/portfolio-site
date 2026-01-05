@@ -7,57 +7,33 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        'woodTexture': "url('./WoodTexture.png')",
+        'woodTexture': "url('./woodTexture.png')",
       },
       colors: {
-        /*brown: {
-          50: '#F7F2EE',
-          100: '#E6D6C9',
-          200: '#BE8C67', // yours (moved slightly darker than typical 100)
-          300: '#A6795A',
-          400: '#987053', // yours (better fit here)
-          500: '#71533E', // yours (this reads more like a true 500)
-          600: '#5E4635',
-          700: '#4B382A',
-          800: '#3C2E24',
-          900: '#322923', // yours
-          950: '#1F1915',
-        },*/
-        brown: {
-          50:  "#f6f2ee",
-          100: "#e8ded4",
-          200: "#d3c1ae",
-          300: "#bda386",
-          400: "#a07f5f", // wood & accents
-          500: "#86664b",
-          600: "#6d523d",
-          700: "#574132",
-          800: "#402f25",
-          900: "#2e221b",
-        },
         pink: {
-          50:  "#fbf3f6",
-          100: "#f6dfe7",
-          200: "#edbccd",
-          300: "#e099b1",
-          400: "#cf6f8f", // book-ready
-          500: "#b85778",
-          600: "#9d4664",
-          700: "#7f384f",
-          800: "#612a3c",
-          900: "#441f2c",
+          50:  "#fdf2f4",
+          100: "#fbe3e6",
+          200: "#f7c6cd",
+          300: "#f3b0b9",
+          400: "#f49da6",
+          500: "#e8848f",
+          600: "#c96a73",
+          700: "#a0555d",
+          800: "#7a3f45",
+          900: "#553032",
         },
-        purple: {
-          50:  "#f6f3f8",
-          100: "#e6deee",
-          200: "#cfc0dc",
-          300: "#b49fc8",
-          400: "#9a7fb3", // book-ready
-          500: "#7f6598",
-          600: "#654f7a",
-          700: "#503e5f",
-          800: "#3b2e45",
-          900: "#2a2232",
+
+        yellow: {
+          50:  "#fff8ec",
+          100: "#ffedd0",
+          200: "#fde1aa",
+          300: "#fdd27f",
+          400: "#fcbf62",
+          500: "#fcc360",
+          600: "#e3a94d",
+          700: "#b8873d",
+          800: "#87652d",
+          900: "#5e471f",
         },
 
         green: {
@@ -84,38 +60,37 @@ export default {
           800: "#2f3f4f",
           900: "#222d39",
         },
-        yellow: {
-          50:  "#fbf9f3",
-          100: "#f6eed9",
-          200: "#eddcab",
-          300: "#e1c97a",
-          400: "#cfb053", // warmer, clearer yellow
-          500: "#b89743",
-          600: "#9a7d37",
-          700: "#7a632c",
-          800: "#594820",
-          900: "#403417",
+
+        purple: {
+          50:  "#f6f4fa",
+          100: "#ebe6f2",
+          200: "#d9d1e6",
+          300: "#c8bddb",
+          400: "#b093dd",
+          500: "#a295c1",
+          600: "#857aa7",
+          700: "#696089",
+          800: "#4e4766",
+          900: "#37324a",
         },
-        parchment: {
-          50:  '#FBFAF8',
-          100: '#F6F2EC',
-          200: '#EEE7DD',
-          300: '#E4D9CB',
-          400: '#D6C8B6',
-          500: '#C6B6A1',
-          600: '#A99682',
-          700: '#877868',
-          800: '#5E544A',
-          900: '#3F3832',
-          950: '#26211D',
+
+        brown: {
+          50:  "#fff6ee",
+          100: "#fde8d7",
+          200: "#fbd6b5",
+          300: "#f9c892",
+          400: "#f8c693",
+          500: "#e2ad78",
+          600: "#c48e60",
+          700: "#9e704c",
+          800: "#745238",
+          900: "#523a29",
         },
         text: {
           primary: '#322923',   // brown-900 (your existing color)
           secondary: '#4B382A', // brown-700
           muted: '#665F59',     // parchment/brown blend
         }
-
-
       }
     },
   },
