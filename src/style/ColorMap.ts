@@ -49,6 +49,5 @@ const ColorMap: Record<string, string> = {
     pspurple: "bg-purpleSpine",
     pspink: "bg-pinkSpine",
 
-
 };
 export default ColorMap;
