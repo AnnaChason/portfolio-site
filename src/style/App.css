@@ -1,20 +1,22 @@
-#root {
-  text-align: center;
-
-}
-html, body, #root {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100vh;
 }
-body{
+
+body {
+  overflow-x: hidden;
   @apply bg-green-400;
   font-family:'Serif', 'serif';
 }
-* {
-  box-sizing: border-box;
+
+/* React mount */
+#root {
+  width: 100%;
+  min-height: 100vh;
 }
+
 .logo {
   height: 6em;
   padding: 1.5em;
