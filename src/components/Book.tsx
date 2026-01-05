@@ -35,7 +35,7 @@ const Book: React.FC<BookComponentProps> = ({
                 </div>
             </div>
             {/*book spine for smaller ones*/}
-            <BookSpine title={title} color={color}></BookSpine>
+            <BookSpine title={title} color={color} onClick={onClick}></BookSpine>
         </div>
     );
 };
