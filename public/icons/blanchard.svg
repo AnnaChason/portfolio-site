@@ -1,0 +1,55 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 128 128"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+>
+
+    <!-- Building group (scaled down) -->
+    <g transform="scale(0.9) translate(7, 12)">
+        <!-- Base -->
+        <line x1="16" y1="104" x2="112" y2="104" />
+
+        <!-- Left wing -->
+        <rect x="16" y="56" width="32" height="48" rx="4" />
+        <line x1="26" y1="66" x2="26" y2="66" />
+        <line x1="38" y1="66" x2="38" y2="66" />
+
+        <!-- Right wing -->
+        <rect x="80" y="56" width="32" height="48" rx="4" />
+        <line x1="90" y1="66" x2="90" y2="66" />
+        <line x1="102" y1="66" x2="102" y2="66" />
+
+        <!-- Main center building -->
+        <rect x="48" y="48" width="32" height="56" rx="4" />
+
+        <!-- Center windows -->
+        <line x1="56" y1="62" x2="56" y2="62" />
+        <line x1="72" y1="62" x2="72" y2="62" />
+        <line x1="56" y1="74" x2="56" y2="74" />
+        <line x1="72" y1="74" x2="72" y2="74" />
+
+        <!-- Door -->
+        <path d="M58 104 V88 C58 82 70 82 70 88 V104" />
+
+        <!-- Bell tower base -->
+        <rect x="52" y="28" width="24" height="20" rx="4" />
+
+        <!-- Diagonal transition roof -->
+        <path d="M50 28 L59 18 L69 18 L78 28 Z" />
+
+        <!-- Bell opening -->
+        <circle cx="64" cy="38" r="3" />
+    </g>
+
+    <!-- Flag pole (taller, outside scale) -->
+    <line x1="64" y1="26" x2="64" y2="6" />
+
+    <!-- Flag -->
+    <path d="M64 18 H78 L72 14 L78 8 H64" />
+
+</svg>
+

@@ -10,6 +10,7 @@ export default {
     extend: {
       backgroundImage:{
         'woodTexture': "url('./woodTexture.png')",
+        'woodSign': "url('./woodSign.webp')",
         'blueCover': "url('./blueCover.png')",
         'blueSpine': "url('./blueSpine.png')",
         'greenCover': "url('./greenCover.png')",
@@ -98,11 +99,6 @@ export default {
           700: "#9e704c",
           800: "#745238",
           900: "#523a29",
-        },
-        text: {
-          primary: '#322923',   // brown-900 (your existing color)
-          secondary: '#4B382A', // brown-700
-          muted: '#665F59',     // parchment/brown blend
         }
       }
     },
