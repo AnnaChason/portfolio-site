@@ -11,6 +11,7 @@ export default {
       backgroundImage:{
         'woodTexture': "url('./woodTexture.png')",
         'woodSign': "url('./woodSign.webp')",
+        'woodPlaque': "url('./woodPlaque.png')",
         'blueCover': "url('./blueCover.png')",
         'blueSpine': "url('./blueSpine.png')",
         'greenCover': "url('./greenCover.png')",
@@ -99,8 +100,22 @@ export default {
           700: "#9e704c",
           800: "#745238",
           900: "#523a29",
-        }
+        },
+
+      parchment: {
+        50:  '#FBFAF8',
+        100: '#F6F2EC',
+        200: '#EEE7DD',
+        300: '#E4D9CB',
+        400: '#D6C8B6',
+        500: '#C6B6A1',
+        600: '#A99682',
+        700: '#877868',
+        800: '#5E544A',
+        900: '#3F3832',
+        950: '#26211D',
       }
+    }
     },
   },
   plugins: [],
