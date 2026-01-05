@@ -15,10 +15,10 @@ const Shelf: React.FC = () => {
             <div className={" max-w-screen-lg flex flex-wrap justify-center"}>
                 <Book title={"The Secret Garden"} color={"green"}></Book>
                 <Book title={"The Little Princess"} color={"pink"}></Book>
-                <Book title={"Peter Pan"} color={"blue"}></Book>
-                <Book title={"Harry potter and the goblet of fire"} color={"yellow"}></Book>
-                <BookSpine title={"great gatsby"} color={"purple"}></BookSpine>
-                <BookSpine title={"great gatsby"} color={"blue"} ></BookSpine>
+                <Book title={"Peter Pan"} color={"yellow"}></Book>
+                <Book title={"Harry potter and the goblet of fire"} color={"blue"}></Book>
+                <BookSpine title={"great gatsby"} color={"pink"}></BookSpine>
+                <BookSpine title={"great gatsby"} color={"yellow"} ></BookSpine>
                 <div className={" w-full h-8 rounded bg-woodTexture mb-5 border border-brown-400 "}></div>
             </div>
         </div>

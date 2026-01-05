@@ -1,5 +1,5 @@
 //import { useState } from 'react'
-import './App.css';
+import './style/App.css';
 import Book from './components/Book.tsx';
 import OpenBook from './components/OpenBook.tsx';
 import Shelf from './components/Shelf.tsx';

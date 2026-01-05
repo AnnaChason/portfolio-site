@@ -1,3 +1,5 @@
+import * as url from "node:url";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -8,6 +10,17 @@ export default {
     extend: {
       backgroundImage:{
         'woodTexture': "url('./woodTexture.png')",
+        'blueCover': "url('./blueCover.png')",
+        'blueSpine': "url('./blueSpine.png')",
+        'greenCover': "url('./greenCover.png')",
+        'greenSpine': "url('./greenSpine.png')",
+        'purpleCover': "url('./purpleCover.png')",
+        'purpleSpine': "url('./purpleSpine.png')",
+        'yellowCover': "url('./yellowCover.png')",
+        'yellowSpine': "url('./yellowSpine.png')",
+        'pinkCover': "url('./pinkCover.png')",
+        'pinkSpine': "url('./pinkSpine.png')",
+
       },
       colors: {
         pink: {
