@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {type ReactNode} from 'react';
 import ColorMap from '../style/ColorMap.ts';
 import BookSpine from './BookSpine.tsx';
 
@@ -6,20 +6,22 @@ export interface BookProps {
     title: string;
     color: string;
     image: string;
-    content: string;
+    content: React.ReactNode;
+    titlePage?: ReactNode;
 }
-type BookComponentProps = BookProps & {
+type BookComponentProps={
+    bprops: BookProps;
     onClick: () => void;
 };
 
 
 const Book: React.FC<BookComponentProps> = ({
-    title,
-    color,
-    image,
+    bprops,
     onClick,
 }) => {
-
+    const title=bprops.title;
+    const color=bprops.color;
+    const image=bprops.image;
 
     return (
         <div className={"cursor-pointer"}>

@@ -22,7 +22,7 @@ export default {
         'yellowSpine': "url('./yellowSpine.png')",
         'pinkCover': "url('./pinkCover.png')",
         'pinkSpine': "url('./pinkSpine.png')",
-
+        'plaid': "url('./plaid.png')"
       },
       colors: {
         pink: {
