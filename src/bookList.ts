@@ -34,7 +34,7 @@ export const bookList: BookProps[] = [
     {title: "Little Professor Bookshop", color:"green", image: 'none'/*get image!*/, content:bookContentPages[6], titlePage:bookTitlePages[6]},
     //leadership and activities
     //contact
-   // {title:"contact", color:"pink", image:'none', content:bookContentPages[-1], titlePage:bookTitlePages[-1]},
+   {title:"Get In Touch!", color:"pink", image:'none', content:bookContentPages[1], titlePage:bookTitlePages[1]},
 ];
 
 export default bookList;
