@@ -5,6 +5,9 @@
  * d prefix = darker bg version (usually 900)
  * t prefix = text coloring
  * b prefix = border coloring
+ * pc picture cover = cover with cover image
+ * ps picture spine = cover with spine image
+ * pss picture spine side = cover with spine sideways
  */
 const ColorMap: Record<string, string> = {
     blue: "bg-blue-400",
@@ -48,6 +51,12 @@ const ColorMap: Record<string, string> = {
     psyellow: "bg-yellowSpine",
     pspurple: "bg-purpleSpine",
     pspink: "bg-pinkSpine",
+
+    pssblue: "bg-blueSpineSide",
+    pssgreen: "bg-greenSpineSide",
+    pssyellow: "bg-yellowSpineSide",
+    psspurple: "bg-purpleSpineSide",
+    psspink: "bg-pinkSpineSide",
 
 };
 export default ColorMap;

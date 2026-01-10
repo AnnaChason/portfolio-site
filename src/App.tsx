@@ -3,7 +3,7 @@ import './style/App.css';
 import Book from './components/Book.tsx';
 import OpenBook from './components/OpenBook.tsx';
 import Shelf from './components/Shelf.tsx';
-import Sign from '../public/woodSign.webp';
+import BookSpine from './components/BookSpine.tsx';
 import bookList from './bookList.ts'
 
 
@@ -26,12 +26,18 @@ function App() {
                 <Book onClick={() => setOpenBookId(bookList[1].title)} bprops={bookList[1]}></Book>
                 <Book onClick={() => setOpenBookId(bookList[2].title)} bprops={bookList[2]}></Book>
                 <Book onClick={() => setOpenBookId(bookList[3].title)} bprops={bookList[3]}></Book>
+
             </Shelf>
             <Shelf category={'Technologies and Frameworks'}>
                 <Book onClick={() => setOpenBookId(bookList[4].title)} bprops={bookList[4]}></Book>
                 <Book onClick={() => setOpenBookId(bookList[5].title)} bprops={bookList[5]}></Book>
                 <Book onClick={() => setOpenBookId(bookList[6].title)} bprops={bookList[6]}></Book>
-                <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[7]}></Book>
+                <div className={"flex flex-col justify-end items-center"}>
+                <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[7]} style={'spine-side'}></Book>
+                <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[8]} style={'spine-side'}></Book>
+                <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[9]} style={'spine-side'}></Book>
+                </div>
+
             </Shelf>
             <Shelf category={'Projects'}>
                 <Book onClick={() => setOpenBookId(bookList[8].title)} bprops={bookList[8]}></Book>
