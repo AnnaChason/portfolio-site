@@ -14,7 +14,7 @@ export interface BookProps {
 type BookComponentProps={
     bprops: BookProps;
     style?: string;
-    onClick: () => void;
+    onClick?: () => void;
 };
 
 
@@ -24,10 +24,9 @@ const Book: React.FC<BookComponentProps> = ({
     style,
 }) => {
     const title=bprops.title;
-    const color=bprops.color;
+    const color = bprops.color;
     const image=bprops.image;
     const className=bprops.className;
-
 
     if(style == 'spine-side'){
       return(
@@ -46,13 +45,13 @@ const Book: React.FC<BookComponentProps> = ({
             <div className={"cursor-pointer"}>
                 {/*book cover for larger screens*/}
                 <div onClick={onClick}
-                     className={"hidden lg:flex bg-white pr-1 pt-1 shadow-md rounded h-[270px] w-48 border-2 border-solid m-3 mb-0 hover:-translate-y-2 " + ColorMap["b" + color] +" "+ className}>
-                    <div className={"w-4 h-full " + ColorMap["d" + color]}></div>
-                    <div className={"rounded-r flex  flex-wrap h-full flex-grow justify-center content-center bg-no-repeat " + ColorMap["pc" + color]} style={{backgroundSize:'100% 100%'}}>
+                     className={"hidden lg:flex bg-white pr-1 pt-1 shadow-md rounded h-[270px] w-48 border-2 border-solid m-3 mb-0 "+(onClick ?  " hover:-translate-y-2 " + ColorMap["b" + color]: ColorMap["b" + color]) +" "+ className}>
+                    <div className={"w-4 h-full " + (onClick ? ColorMap["d" + color] : ColorMap[color])}></div>
+                    <div className={"rounded-r flex  flex-wrap h-full flex-grow justify-center content-center bg-no-repeat " + (!onClick ? ColorMap["d" + color] : ColorMap["pc" + color])} style={{backgroundSize:'100% 100%'}}>
                         {image != 'none' ? <img className={"w-14 h-14 "} alt="logo" src={image}></img> : <></>}
                         <div className={"w-full h-0 m-0"}></div>
                         <div className="flex flex-grow justify-center items-center bg-none">
-                            <h2 className={"m-4 text-center font-bold text-2xl " + ColorMap["t" + color]}>{title}</h2>
+                            <h2 className={"m-4 text-center font-bold text-2xl " + (!onClick ? ColorMap["dt" + color]: ColorMap["t" + color])}>{title}</h2>
                         </div>
                     </div>
                 </div>

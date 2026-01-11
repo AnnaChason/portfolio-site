@@ -58,5 +58,23 @@ const ColorMap: Record<string, string> = {
     psspurple: "bg-purpleSpineSide",
     psspink: "bg-pinkSpineSide",
 
+    /*pcdblue: "bg-blueCover",
+    pcdgreen: "bg-greenCover",
+    pcdyellow: "bg-yellowCover",
+    pcdpurple: "bg-purpleCover",
+    pcdpink: "bg-pinkCover",
+
+    psdblue: "bg-blueSpine",
+    psdgreen: "bg-greenSpine",
+    psdyellow: "bg-yellowSpine",
+    psdpurple: "bg-purpleSpine",
+    psdpink: "bg-pinkSpine",
+
+    pssdblue: "bg-blueSpineSide",
+    pssdgreen: "bg-greenSpineSide",
+    pssdyellow: "bg-yellowSpineSide",
+    pssdpurple: "bg-purpleSpineSide",
+    pssdpink: "bg-pinkSpineSide",*/
+
 };
 export default ColorMap;

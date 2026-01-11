@@ -23,16 +23,16 @@ function App() {
                 <Shelf category={'Contact'}><Book onClick={() => setOpenBookId(bookList[14].title)} bprops={bookList[14]}></Book></Shelf>
             </div>
             <Shelf category={'Programming Languages'}>
-                <Book onClick={() => setOpenBookId(bookList[1].title)} bprops={bookList[1]}></Book>
-                <Book onClick={() => setOpenBookId(bookList[2].title)} bprops={bookList[2]}></Book>
-                <Book onClick={() => setOpenBookId(bookList[3].title)} bprops={bookList[3]}></Book>
+                <Book bprops={bookList[1]}></Book>
+                <Book bprops={bookList[2]}></Book>
+                <Book bprops={bookList[3]}></Book>
 
             </Shelf>
             <Shelf category={'Technologies and Frameworks'}>
                 <Book onClick={() => setOpenBookId(bookList[4].title)} bprops={bookList[4]}></Book>
                 <Book onClick={() => setOpenBookId(bookList[5].title)} bprops={bookList[5]}></Book>
                 <Book onClick={() => setOpenBookId(bookList[6].title)} bprops={bookList[6]}></Book>
-                <div className={"flex flex-col justify-end items-center"}>
+                <div className={"flex flex-col justify-end items-center w-3"}>
                 <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[7]} style={'spine-side'}></Book>
                 <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[8]} style={'spine-side'}></Book>
                 <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[9]} style={'spine-side'}></Book>
