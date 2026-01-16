@@ -40,7 +40,7 @@ const ColorMap: Record<string, string> = {
     bpurple: "border-purple-900",
     bpink: "border-purple-900",
 
-    pcblue: "bg-blueCover",
+    pcblue: "bg-blueCover ",
     pcgreen: "bg-greenCover",
     pcyellow: "bg-yellowCover",
     pcpurple: "bg-purpleCover",
