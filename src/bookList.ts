@@ -21,8 +21,8 @@ export const bookList: BookProps[] = [
     //4-7: technologies/frameworks
     {title:"Git/Github", color:"purple", image:github, content:bookContentPages[0], titlePage:bookTitlePages[0]},
     {title:"Firebase", color:"yellow", image:firebase, content:bookContentPages[0], titlePage:bookTitlePages[0]},
-    {title:"Supabase", color:"green", image:'none', content:bookContentPages[0], titlePage:bookTitlePages[0], className:'h-36'},
-    {title:"React", color:"pink", image:reactLogo, content:bookContentPages[0], titlePage:bookTitlePages[0], className:' w-36 '},
+    {title:"Supabase", color:"green", image:'none', content:bookContentPages[0], titlePage:bookTitlePages[0]},
+    {title:"React", color:"blue", image:reactLogo, content:bookContentPages[0], titlePage:bookTitlePages[0]},
     //8-10: projects
     {title: "Bulletin", color:"yellow", image: bulletinLogo, content:bookContentPages[1], titlePage:bookTitlePages[1]},
     {title: "Flippy", color:"blue", image: 'none', content:bookContentPages[2], titlePage:bookTitlePages[2]},

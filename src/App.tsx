@@ -11,6 +11,7 @@ import scissors from "./imgs/scissors.png";
 import goat from "./imgs/goat.png";
 import Tor from "./imgs/Tor.png";
 import pinkTeaCup from "./imgs/pinkTeaCup.png";
+import TeaCup from "./imgs/TeaCup.png";
 
 const BOOK_SIZES = {
     tall: "h-44",
@@ -53,20 +54,30 @@ function App() {
                     <Shelf category={'Contact'}><Book onClick={() => setOpenBookId(bookList[14].title)} bprops={bookList[14]}></Book></Shelf>
                 </div>
                 <Shelf category={'Programming Languages'}>
-                    <Book bprops={bookList[1]} style={"spine-side"}></Book>
-                    <Book bprops={bookList[2]} style={"spine"}></Book>
-                    <Book bprops={bookList[3]} ></Book>
+                    <Book bprops={bookList[1]} ></Book>
+                    <div className={"flex flex-wrap flex-row justify-center w-72"}>
+                        <Book bprops={bookList[2]}  onClick={() => setOpenBookId(bookList[4].title)} classname={" h-64 "}></Book>
+                        <Book bprops={bookList[3]} style={"spine-side"}></Book>
+                    </div>
+
+                    <Book bprops={bookList[3]} style={"spine"} ></Book>{/*js*/}
+                    <Book bprops={bookList[3]} style={"spine"} classname={" h-52"}></Book>{/*ts*/}
+                    <img src={Ducky} alt={"rubber duck"} className={"h-24 -scale-x-[1] translate-x-4"}></img>
 
                 </Shelf>
+
                 <Shelf category={'Technologies and Frameworks'}>
-                    <Book onClick={() => setOpenBookId(bookList[4].title)} bprops={bookList[4]}></Book>
-                    <Book onClick={() => setOpenBookId(bookList[5].title)} bprops={bookList[5]}></Book>
-                    <Book onClick={() => setOpenBookId(bookList[6].title)} bprops={bookList[6]}></Book>
                     <div className={"flex flex-col justify-end items-center"}>
-                        <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[7]} style={'spine-side'}></Book>
-                        <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[8]} style={'spine-side'}></Book>
-                        <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[9]} style={'spine-side'}></Book>
+                        <img src={pinkTeaCup} className={"w-32 translate-y-1"} alt={"tea cup"}></img>
+                        <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[7]} style={'spine-side'} classname={"w-56"}></Book>{/* make blue*/}
+                        <Book bprops={fillerBook("pink")} style={'spine-side'} classname={"w-60"}></Book>
+                        <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[8]} style={'spine-side'}></Book> {/*tailwind*/}
                     </div>
+                    <Book onClick={() => setOpenBookId(bookList[4].title)} bprops={bookList[4]}></Book>
+                    <Book onClick={() => setOpenBookId(bookList[5].title)} bprops={bookList[5]} style={"spine"} classname={" -rotate-6"}></Book>
+                    <Book onClick={() => setOpenBookId(bookList[6].title)} bprops={bookList[6]} style={"spine"} classname={"-rotate-12 translate-x-2"}></Book>
+                    <Book bprops={fillerBook("blue")} style={'spine'} classname={"-rotate-12 translate-x-2 -translate-y-1"}></Book>
+
 
                 </Shelf>
                 <Shelf category={'Projects'}>
