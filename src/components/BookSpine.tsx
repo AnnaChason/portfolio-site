@@ -39,7 +39,7 @@ export const BookSpineSide: React.FC<bookSpineProps> = ({bprops, onClick, classn
         }
     }
     return (
-        <div  onClick={onClick} className={"relative flex flex-col h-16 w-[270px] rounded-md m-2 mt-0 mb-0 justify-center items-center bg-no-repeat bg-center " + ColorMap["pss"+color] + (onClick ? " hover:-translate-y-2 ": " bg-black/25 bg-blend-multiply ") + classname}  style={{backgroundSize:'100% 100%'}}>
+        <div  onClick={onClick} className={"relative flex flex-col h-16  w-[270px] rounded-md m-2 mt-0 mb-0 justify-center items-center bg-no-repeat bg-center " + ColorMap["pss"+color] + (onClick ? " hover:-translate-y-2 ": " bg-black/25 bg-blend-multiply ") + classname}  style={{backgroundSize:'100% 100%'}}>
             <h2 className={"absolute inset-0 flex items-center justify-center font-bold text-xl whitespace-nowrap " +  ColorMap["t"+color] }>{title}</h2>
         </div>
     );
