@@ -40,19 +40,21 @@ const Book: React.FC<BookComponentProps> = ({
 
     if(style == 'spine-side'){
       return(
-          <div className={"cursor-pointer"}>
+          <div className={onClick ? "cursor-pointer" : ""}>
             <BookSpineSide bprops={bprops} onClick={onClick} style={'idk'} classname={classname}></BookSpineSide>
           </div>
       );
     }
     else if(style == 'spine'){
         return(
+            <div className={onClick ? "cursor-pointer" : ""}>
             <BookSpine bprops={bprops} onClick={onClick} style={'hi'} classname={classname}></BookSpine>
+            </div>
         );
     }
     else {
         return (
-            <div className={"cursor-pointer "}>
+            <div className={onClick ? "cursor-pointer" : ""}>
                 {/*book cover for larger screens*/}
                 <div onClick={onClick}
                      className={"hidden lg:flex bg-white pr-1 pt-1 shadow-md rounded h-[270px] w-48 border-2 border-solid m-3 mb-0 "+(onClick ?  " hover:-translate-y-2 " + ColorMap["b" + color]: ColorMap["b" + color]) +"  "+ classname}>
