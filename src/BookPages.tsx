@@ -108,7 +108,7 @@ export const bookContentPages:React.ReactNode[] = [
             <li>coordinated using Github</li>
         </ul>
         <br/>
-        <a href={"https://github.com/AnnaChason/Bulletin"} className={"text-blue-400 hover:text-brown-600"}>View on Github</a>
+        <a href={"https://github.com/AnnaChason/Bulletin"} target="_blank" className={"text-blue-400 hover:text-brown-600"}>View on Github</a>
     </div>,
     //2: flippy
     <div>
@@ -120,7 +120,7 @@ export const bookContentPages:React.ReactNode[] = [
             <li>Supabase</li>
         </ul>
         <br/>
-        <a href={"https://github.com/AnnaChason/Flippy"} className={"text-blue-400 hover:text-brown-600"}>View on Github</a>
+        <a href={"https://github.com/AnnaChason/Flippy"} target="_blank" className={"text-blue-400 hover:text-brown-600"}>View on Github</a>
     </div>,
     //3: this
     <div>
@@ -133,7 +133,7 @@ export const bookContentPages:React.ReactNode[] = [
             <li>Tailwind</li>
         </ul>
         <br/>
-        <a href={"https://github.com/AnnaChason/portfolio-site"} className={"text-blue-400 hover:text-brown-600"}>View on Github</a>
+        <a href={"https://github.com/AnnaChason/portfolio-site"} target="_blank" className={"text-blue-400 hover:text-brown-600"}>View on Github</a>
     </div>,
     /*4: DMFP TA*/
    <div className={"mt-3"}>
@@ -170,7 +170,7 @@ export const bookContentPages:React.ReactNode[] = [
             <li>I used GitHub extensively for team development on Bulletin and the Dorm Collective website</li>
         </ul>
         <br/>
-        <a href={"https://github.com/AnnaChason"} className={"text-blue-400 hover:text-brown-600"}>View my Github profile</a>
+        <a href={"https://github.com/AnnaChason"} target="_blank" className={"text-blue-400 hover:text-brown-600"}>View my Github profile</a>
     </div>,
     /*8: java*/
     <div>
@@ -212,8 +212,8 @@ export const bookContentPages:React.ReactNode[] = [
         <ul className={"ml-2 list-none space-y-4"}>
             <li><span className={"font-bold"} >Email: </span>chasonwiggins@gmail.com</li>
             <li><span className={"font-bold"} >Phone: </span>(205)-305-2964</li>
-            <li> <a href={"https://github.com/AnnaChason"} className={"text-blue-400 hover:text-brown-600"}>Github profile</a></li>
-            <li> <a href={"https://www.linkedin.com/in/anna-wiggins-96419a320"} className={"text-blue-400 hover:text-brown-600"}>LinkedIn profile</a></li>
+            <li> <a href={"https://github.com/AnnaChason"} target="_blank" className={"text-blue-400 hover:text-brown-600"}>Github profile</a></li>
+            <li> <a href={"https://www.linkedin.com/in/anna-wiggins-96419a320"}target="_blank"  className={"text-blue-400 hover:text-brown-600"}>LinkedIn profile</a></li>
         </ul>
     </div>
 

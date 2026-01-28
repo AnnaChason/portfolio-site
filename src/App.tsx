@@ -6,8 +6,7 @@ import Shelf from './components/Shelf.tsx';
 import bookList from './bookList.ts';
 import Ducky from "./imgs/Ducky.png";
 import DuckyFront from "./imgs/DuckyFront.png";
-import DuckyFlower from "./imgs/DuckyWithFlower.png";
-import flowerInPot from "./imgs/flowerInPot.png";
+
 
 const BOOK_SIZES = {
     tall: "h-44",

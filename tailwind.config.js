@@ -8,27 +8,34 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage:{
-        'woodTexture': "url('./woodTexture.png')",
-        'woodSign': "url('./woodSign.webp')",
-        'woodPlaque': "url('./woodPlaque.png')",
-        'blueCover': "url('./blueCover.png')",
-        'blueSpine': "url('./blueSpine.png')",
-        'blueSpineSide': "url('./blueSpineSide.png')",
-        'greenCover': "url('./greenCover.png')",
-        'greenSpine': "url('./greenSpine.png')",
-        'greenSpineSide': "url('./greenSpineSide.png')",
-        'purpleCover': "url('./purpleCover.png')",
-        'purpleSpine': "url('./purpleSpine.png')",
-        'purpleSpineSide': "url('./purpleSpineSide.png')",
-        'yellowCover': "url('./yellowCover.png')",
-        'yellowSpine': "url('./yellowSpine.png')",
-        'yellowSpineSide': "url('./yellowSpineSide.png')",
-        'pinkCover': "url('./pinkCover.png')",
-        'pinkSpine': "url('./pinkSpine.png')",
-        'pinkSpineSide': "url('./pinkSpineSide.png')",
-        'plaid': "url('./plaid.png')"
+      backgroundImage: {
+        'woodTexture': "url('/portfolio-site/woodTexture.png')",
+        'woodSign': "url('/portfolio-site/woodSign.webp')",
+        'woodPlaque': "url('/portfolio-site/woodPlaque.png')",
+
+        'blueCover': "url('/portfolio-site/blueCover.png')",
+        'blueSpine': "url('/portfolio-site/blueSpine.png')",
+        'blueSpineSide': "url('/portfolio-site/blueSpineSide.png')",
+
+        'greenCover': "url('/portfolio-site/greenCover.png')",
+        'greenSpine': "url('/portfolio-site/greenSpine.png')",
+        'greenSpineSide': "url('/portfolio-site/greenSpineSide.png')",
+
+        'purpleCover': "url('/portfolio-site/purpleCover.png')",
+        'purpleSpine': "url('/portfolio-site/purpleSpine.png')",
+        'purpleSpineSide': "url('/portfolio-site/purpleSpineSide.png')",
+
+        'yellowCover': "url('/portfolio-site/yellowCover.png')",
+        'yellowSpine': "url('/portfolio-site/yellowSpine.png')",
+        'yellowSpineSide': "url('/portfolio-site/yellowSpineSide.png')",
+
+        'pinkCover': "url('/portfolio-site/pinkCover.png')",
+        'pinkSpine': "url('/portfolio-site/pinkSpine.png')",
+        'pinkSpineSide': "url('/portfolio-site/pinkSpineSide.png')",
+
+        'plaid': "url('/portfolio-site/plaid.png')",
       },
+
       colors: {
         pink: {
           50:  "#fdf2f4",
