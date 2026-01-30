@@ -27,7 +27,7 @@ function App() {
     const [openBookId, setOpenBookId] = useState<string | null>(null);
 
     return (
-        <div className="w-screen min-h-screen bg-plaid flex flex-col justify-center gap-0">
+        <div className="w-screen min-h-screen bg-plaid flex flex-col justify-center gap-0 sm:overflow-hidden overflow-x-scroll">
             {/* SIGN */}
             <div className="sm:h-[30rem] sm:w-[35rem] w-[20rem] h-[22rem] -translate-y-20 sm:-translate-y-28 self-center p-4 sm:pr-10 sm:pl-10 text-center bg-woodSign bg-cover max-sm:bg-contain max-sm:bg-no-repeat bg-center">
                 <h2 className="text-brown-900 sm:translate-y-48 translate-y-[130px] font-bold sm:text-3xl text-md mb-4">
@@ -56,8 +56,11 @@ function App() {
                         <Book bprops={bookList[3]} style={"spine-side"}></Book>
                     </div>
 
-                    <Book bprops={bookList[4]} style={"spine"} classname={" !h-56"} ></Book>{/*js*/}
-                    <Book bprops={bookList[5]} style={"spine"} classname={" !h-64"}></Book>{/*ts*/}
+
+                    <Book bprops={bookList[4]} style={"spine"} classname={" !h-56"} ></Book>{/*ts*/}
+                    <div className={"hidden sm:block"}>
+                    <Book bprops={bookList[5]} style={"spine"} classname={" !h-64"}></Book>{/*js*/}
+                     </div>
                     <img src={Ducky} alt={"rubber duck"} className={"h-24 -scale-x-[1] translate-x-4 hidden md:block"}></img>
 
 
@@ -78,14 +81,14 @@ function App() {
 
                 </Shelf>
                 <Shelf category={'Projects'}>
-                    <img src={Ducky} className={"w-36 -scale-x-[1]"} alt={"Rubber Duck"}></img>
+                    <img src={Ducky} className={"w-36 -scale-x-[1] hidden md:block"} alt={"Rubber Duck"}></img>
                     <Book onClick={() => setOpenBookId(bookList[13].title)} bprops={bookList[13]}  style={"spine"} classname={" !w-12 !h-[230px]"}></Book>
                     <Book onClick={() => setOpenBookId(bookList[14].title)} bprops={bookList[14]} style={"spine"} classname={" !h-52"}></Book>
                     <Book onClick={() => setOpenBookId(bookList[12].title)} bprops={bookList[12]}></Book>
                     <Book onClick={() => setOpenBookId(bookList[15].title)} bprops={bookList[15]} classname={"!w-40 !h-56"} ></Book>
-                    <img src={Ducky} className={"w-36 "} alt={"Rubber Duck"}></img>
+                    <img src={Ducky} className={"w-36 hidden md:block"} alt={"Rubber Duck"}></img>
                 </Shelf>
-                <Shelf category={'Work and Volunteer Experience'}>
+                <Shelf category={'Work/Volunteer Experience'}>
                     <Book onClick={() => setOpenBookId(bookList[18].title)} bprops={bookList[18]} classname={" !h-[240px] w-40"}></Book>
                     <div className={"flex flex-row-reverse lg:flex-col flex-wrap justify-end items-center"}>
                         <Book onClick={() => setOpenBookId(bookList[20].title)} bprops={bookList[20]} style={"spine-side"} classname={" !w-52"}></Book>
