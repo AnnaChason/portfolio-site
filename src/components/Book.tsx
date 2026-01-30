@@ -41,7 +41,9 @@ const Book: React.FC<BookComponentProps> = ({
     if(style == 'spine-side'){
       return(
           <div className={onClick ? "cursor-pointer" : ""}>
-            <BookSpineSide bprops={bprops} onClick={onClick} style={'idk'} classname={classname}></BookSpineSide>
+            <BookSpineSide bprops={bprops} onClick={onClick} style={'idk'} classname={classname + " hidden lg:flex "}></BookSpineSide>
+              {/*upright spine for smaller ones*/}
+              <BookSpine bprops={bprops} onClick={onClick} style={'hidden'}></BookSpine>
           </div>
       );
     }

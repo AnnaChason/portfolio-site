@@ -51,20 +51,21 @@ function App() {
                 <Shelf category={'Programming Languages'}>
                     <Book bprops={bookList[6]} style={"spine"} classname={" !w-12 h-56  rotate-6"}></Book>{/*SQL*/}
                     <Book bprops={bookList[1]} classname={" h-60 w-40 "}></Book>
-                    <div className={"flex flex-wrap flex-row justify-center w-72"}>
+                    <div className={"flex flex-wrap flex-row justify-center lg:w-72"}>
                         <Book bprops={bookList[2]}  onClick={() => setOpenBookId(bookList[2].title)} classname={"!w-40 !h-56"}></Book>
                         <Book bprops={bookList[3]} style={"spine-side"}></Book>
                     </div>
 
                     <Book bprops={bookList[4]} style={"spine"} classname={" !h-56"} ></Book>{/*js*/}
                     <Book bprops={bookList[5]} style={"spine"} classname={" !h-64"}></Book>{/*ts*/}
-                    <img src={Ducky} alt={"rubber duck"} className={"h-24 -scale-x-[1] translate-x-4"}></img>
+                    <img src={Ducky} alt={"rubber duck"} className={"h-24 -scale-x-[1] translate-x-4 hidden md:block"}></img>
+
 
                 </Shelf>
 
                 <Shelf category={'Technologies and Frameworks'}>
-                    <div className={"flex flex-col justify-end items-center"}>
-                        <img src={DuckyFront} className={"w-32 translate-y-4"} alt={"rubber duck"}></img>
+                    <div className={"flex lg:flex-col justify-end items-center"}>
+                        <img src={DuckyFront} className={"w-32 translate-y-4 hidden lg:block"} alt={"rubber duck"}></img>
                         <Book bprops={bookList[11]} style={'spine-side'} classname={" !w-48"}></Book>
                         <Book bprops={bookList[10]} style={'spine-side'} classname={"  h-20"}></Book>{/* make blue*/}
                     </div>
@@ -86,14 +87,14 @@ function App() {
                 </Shelf>
                 <Shelf category={'Work and Volunteer Experience'}>
                     <Book onClick={() => setOpenBookId(bookList[18].title)} bprops={bookList[18]} classname={" !h-[240px] w-40"}></Book>
-                    <div className={"flex flex-col flex-wrap justify-end items-center"}>
+                    <div className={"flex flex-row-reverse lg:flex-col flex-wrap justify-end items-center"}>
                         <Book onClick={() => setOpenBookId(bookList[20].title)} bprops={bookList[20]} style={"spine-side"} classname={" !w-52"}></Book>
                         <Book onClick={() => setOpenBookId(bookList[16].title)} bprops={bookList[16]} style={"spine-side"} classname={" !w-60 !h-12"}></Book>
                         <Book onClick={() => setOpenBookId(bookList[17].title)} bprops={bookList[17]} style={"spine-side"} classname={" !w-60 !h-20"}></Book>
                     </div>
                     <Book onClick={() => setOpenBookId(bookList[19].title)} bprops={bookList[19]}></Book>{/*DEKES*/}
 
-                    <img src={DuckyFront} className={"w-32 translate-x-4 translate-y-4"} alt={"Rubber Ducky"}></img>
+                    <img src={DuckyFront} className={"w-32 translate-x-4 translate-y-4 hidden md:block"} alt={"Rubber Ducky"}></img>
                 </Shelf>
 
             </div>
