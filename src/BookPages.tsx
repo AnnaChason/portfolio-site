@@ -98,7 +98,7 @@ export const bookContentPages:React.ReactNode[] = [
     //1: Bulletin
     <div>
         <p>
-                Bulletin is a virtual flyer board android app that I built in collaboration with 3 other students as a semester-long class project. I led our team of 4, organizing meeting times, delegating tasks, and keeping us on schedule.
+                Bulletin is a virtual flyer board android app that I built in collaboration with 3 other students as a semester-long class project.
         </p>
         <h3>It was: </h3>
         <ul className={"ml-10"}>
@@ -213,9 +213,9 @@ export const bookContentPages:React.ReactNode[] = [
             <li><span className={"font-bold"} >Email: </span>chasonwiggins@gmail.com</li>
             <li><span className={"font-bold"} >Phone: </span>(205)-305-2964</li>
             <li> <a href={"https://github.com/AnnaChason"} target="_blank" className={"text-blue-400 hover:text-brown-600"}>Github profile</a></li>
-            <li> <a href={"https://www.linkedin.com/in/anna-wiggins-96419a320"}target="_blank"  className={"text-blue-400 hover:text-brown-600"}>LinkedIn profile</a></li>
+            <li> <a href={"https://www.linkedin.com/in/anna-wiggins-96419a320"} target="_blank"  className={"text-blue-400 hover:text-brown-600"}>LinkedIn profile</a></li>
+            <li> <a href={"https://www.goodreads.com/user/show/98177448-anna-chason-wiggins"} target={"_blank"} className={"text-blue-400 hover:text-brown-600"}>Find me on Goodreads for book recommendations!</a></li>
         </ul>
     </div>
-
 ];
 export default bookContentPages;

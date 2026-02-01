@@ -34,7 +34,7 @@ function App() {
                     Anna Chason Wiggins
                 </h2>
                 <h3 className="sm:translate-y-48 translate-y-32 sm:text-lg text-xs text-brown-800 font-bold">
-                    Hello! I am a computer science major at Wheaton College (IL) from Birmingham, AL. I am passionate about problem solving and developing programs that can help people!
+                    Hello! I am a computer science major at Wheaton College (IL) from Birmingham, AL.
                     <br/><br/>
                     Welcome to my library!
                 </h3>

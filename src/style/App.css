@@ -8,7 +8,7 @@ html, body {
 body {
   overflow-x: hidden;
   @apply bg-green-400;
-  font-family:'Serif', 'serif';
+  font-family: 'trebuchet ms', Helvetica, sans-serif;
 }
 
 /* React mount */
