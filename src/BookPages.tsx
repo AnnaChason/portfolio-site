@@ -1,9 +1,4 @@
-import type {BookProps} from "./components/Book.tsx";
-import python  from './icons/python-language-logotype-svgrepo-com.svg';
-import java from './icons/java-logo-svgrepo-com.svg';
-import ts from './icons/logo-ts-svgrepo-com.svg';
-import js from './icons/logo-js-svgrepo-com.svg';
-import blanch from './icons/blanchard.svg'
+import AC from './imgs/AC.png';
 
 export const bookTitlePages: React.ReactNode[] = [
     //0:wheaton
@@ -72,7 +67,8 @@ export const bookTitlePages: React.ReactNode[] = [
         <h3>Aug 2025 - present</h3>
     </div>,
     //12:contact
-    <div  className={"text-center"}>
+    <div  className={"text-center flex flex-col justify-center items-center"}>
+        <img src={AC} className={"w-36"}/>
         <h1>Contact Me</h1>
     </div>,
 ];
@@ -199,7 +195,7 @@ export const bookContentPages:React.ReactNode[] = [
     </div>,
     //11: dekes
     <div className={"mt-3"}>
-        <p>Diakonoi is what Wheaton calls their Campus host programs. As a Diakonoi, I:</p>
+        <p>Diakonoi is what Wheaton calls their Campus host programs. <br/> As a Diakonoi, I:</p>
         <ul className={"ml-10"}>
             <li>Lead campus tours</li>
             <li>Engage with prospective students and families</li>
