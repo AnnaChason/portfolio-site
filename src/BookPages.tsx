@@ -78,7 +78,7 @@ export const bookContentPages:React.ReactNode[] = [
         <ul className={"ml-4 list-none"}>
             <li className={"font-bold"}>Aug 2024 - Dec 2027(expected)</li>
             <li className={"font-bold"}>BS in Computer Science</li>
-            {/* <li className={"font-bold"}>Math minor</li>*/}
+             <li className={"font-bold"}>Math minor</li>
             <li><span className={"font-bold"}>GPA:</span> 4.0</li>
             <li><span className={"font-bold"}>Relevant Coursework:</span>
                 <ul className={"ml-10 list-disc"}>
@@ -210,7 +210,7 @@ export const bookContentPages:React.ReactNode[] = [
             <li><span className={"font-bold"} >Phone: </span>(205)-305-2964</li>
             <li> <a href={"https://github.com/AnnaChason"} target="_blank" className={"text-blue-400 hover:text-brown-600"}>Github profile</a></li>
             <li> <a href={"https://www.linkedin.com/in/anna-wiggins-96419a320"} target="_blank"  className={"text-blue-400 hover:text-brown-600"}>LinkedIn profile</a></li>
-            <li> <a href={"https://www.goodreads.com/user/show/98177448-anna-chason-wiggins"} target={"_blank"} className={"text-blue-400 hover:text-brown-600"}>Find me on Goodreads for book recommendations!</a></li>
+            <li>For book recommendations view my <a href={"https://www.goodreads.com/user/show/98177448-anna-chason-wiggins"} target={"_blank"} className={"text-blue-400 hover:text-brown-600"}>Goodreads profile</a>!</li>
         </ul>
     </div>
 ];
