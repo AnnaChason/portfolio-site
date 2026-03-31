@@ -208,8 +208,8 @@ export const bookPages: Partial<Record<BookId, BookPageBundle>> = {
             <div>
                 <ul className={'ml-5 mt-3'}>
                     <li>I am comfortable using GitHub for version control both from the terminal and through IDEs</li>
-                    <li>I have some experience with collaborative workflows including branching, pull requests, and resolving merge conflicts</li>
-                    <li>I used GitHub extensively for team development on Bulletin and the Dorm Collective website</li>
+                    <li>I have some experience with collaborative workflows including branching and resolving merge conflicts</li>
+                    <li>I used GitHub extensively for team development on Bulletin and the Wheaton CS Hub</li>
                 </ul>
                 <br />
                 <a href={'https://github.com/AnnaChason'} target="_blank" className={'text-blue-400 hover:text-brown-600'}>

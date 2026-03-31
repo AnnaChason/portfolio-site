@@ -59,7 +59,7 @@ const Book: React.FC<BookComponentProps> = ({
             <div className={onClick ? "cursor-pointer" : ""}>
                 {/*book cover for larger screens*/}
                 <div onClick={onClick}
-                     className={"hidden lg:flex bg-white pr-1 pt-1 shadow-md rounded h-[270px] w-48 border-2 border-solid m-3 mb-0 "+(onClick ?  " hover:-translate-y-2 " + ColorMap["b" + color]: ColorMap["b" + color]) +"  "+ classname}>
+                     className={"hidden lg:flex bg-white pr-1 pt-1 shadow-md rounded h-[270px] w-48 border-2 border-solid m-3 mb-0 transition-transform duration-300 ease-out "+(onClick ?  " hover:-translate-y-2 " + ColorMap["b" + color]: ColorMap["b" + color]) +"  "+ classname}>
                     <div className={"w-4 h-full " + ColorMap["d" + color]}></div>
                     <div className={"rounded-r flex  flex-wrap h-full flex-grow justify-center content-center bg-no-repeat  " + ColorMap["pc" + color] + (onClick ? "" : " bg-black/25 bg-blend-multiply ")} style={{backgroundSize:'100% 100%'}}>
                         {image != 'none' ? <img className={"w-14 h-14 "} alt="logo" src={image}></img> : <></>}

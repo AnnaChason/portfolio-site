@@ -127,7 +127,26 @@ export default {
         900: '#3F3832',
         950: '#26211D',
       }
-    }
+    },
+      keyframes: {
+        bookOpenBackdrop: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        bookOpenLeft: {
+          '0%': { transform: 'rotateY(-32deg)' },
+          '100%': { transform: 'rotateY(0deg)' },
+        },
+        bookOpenRight: {
+          '0%': { transform: 'rotateY(32deg)' },
+          '100%': { transform: 'rotateY(0deg)' },
+        },
+      },
+      animation: {
+        'book-open-backdrop': 'bookOpenBackdrop 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
+        'book-open-left': 'bookOpenLeft 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+        'book-open-right': 'bookOpenRight 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+      },
     },
   },
   plugins: [],
