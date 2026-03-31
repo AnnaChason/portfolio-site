@@ -7,7 +7,7 @@ export interface BookProps {
     title: string;
     color: string;
     image: string;
-    content: React.ReactNode;
+    content?: React.ReactNode;
     className?: string;
     titlePage?: ReactNode;
 }
