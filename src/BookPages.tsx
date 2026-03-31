@@ -71,6 +71,11 @@ export const bookTitlePages: React.ReactNode[] = [
         <img src={AC} className={"w-36"}/>
         <h1>Contact Me</h1>
     </div>,
+    //13: CS Hub
+    <div className={"text-center"}>
+        <h1 className={"text-3xl sm:text-5xl"}>Wheaton<br/>CS Hub</h1>
+        <h3>Jan 2026 - present</h3>
+    </div>,
 ];
 export const bookContentPages:React.ReactNode[] = [
    /*0: wheaton*/
@@ -212,6 +217,15 @@ export const bookContentPages:React.ReactNode[] = [
             <li> <a href={"https://www.linkedin.com/in/anna-wiggins-96419a320"} target="_blank"  className={"text-blue-400 hover:text-brown-600"}>LinkedIn profile</a></li>
             <li>For book recommendations view my <a href={"https://www.goodreads.com/user/show/98177448-anna-chason-wiggins"} target={"_blank"} className={"text-blue-400 hover:text-brown-600"}>Goodreads profile</a>!</li>
         </ul>
+    </div>,
+    //13: CS Hub
+    <div className={"mt-3"}>
+      <p>
+        The Wheaton College CS Hub is a website build to provide students with academic and vocational resources as well as to build community among CS students.
+      <br/>
+      <br/>
+        To develop this website, I collaborated with a team of fellow student, using AI-assisted tools (primarily ChatGPT, Claude, and Cursor) to design and build features while gaining experience in modern AI-supported software development
+      </p>
     </div>
 ];
 export default bookContentPages;

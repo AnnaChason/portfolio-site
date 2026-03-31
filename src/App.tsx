@@ -46,7 +46,7 @@ function App() {
                     <Shelf category={'Education'}>
                         <Book onClick={() => setOpenBookId("Wheaton College")} bprops={bookList[0]}></Book>
                     </Shelf>
-                    <Shelf category={'Contact'}><Book onClick={() => setOpenBookId(bookList[21].title)} bprops={bookList[21]} ></Book></Shelf>
+                    <Shelf category={'Contact'}><Book onClick={() => setOpenBookId(bookList[22].title)} bprops={bookList[22]} ></Book></Shelf>
                 </div>
                 <Shelf category={'Programming Languages'}>
                     <Book bprops={bookList[6]} style={"spine"} classname={" !w-12 h-56  rotate-6"}></Book>{/*SQL*/}
@@ -73,29 +73,26 @@ function App() {
                         <Book bprops={bookList[10]} style={'spine-side'} classname={"  h-20"}></Book>{/* make blue*/}
                     </div>
                     <Book onClick={() => setOpenBookId(bookList[7].title)} bprops={bookList[7]}></Book>
-
                     <Book bprops={bookList[8]} style={"spine"} classname={" -rotate-6"}></Book>
                     <Book  bprops={bookList[9]} style={"spine"} classname={" !w-12 -rotate-12 translate-x-2  -translate-y-1"}></Book>
-
-
-
                 </Shelf>
                 <Shelf category={'Projects'}>
                     <img src={Ducky} className={"w-36 -scale-x-[1] hidden md:block"} alt={"Rubber Duck"}></img>
                     <Book onClick={() => setOpenBookId(bookList[13].title)} bprops={bookList[13]}  style={"spine"} classname={" !w-12 !h-[230px]"}></Book>
                     <Book onClick={() => setOpenBookId(bookList[14].title)} bprops={bookList[14]} style={"spine"} classname={" !h-52"}></Book>
+                    <Book onClick={() => setOpenBookId(bookList[16].title)} bprops={bookList[16]} style={"spine"} classname={" !w-12 !h-[220px] -rotate-3"}></Book>
                     <Book onClick={() => setOpenBookId(bookList[12].title)} bprops={bookList[12]}></Book>
-                    <Book onClick={() => setOpenBookId(bookList[15].title)} bprops={bookList[15]} classname={"!w-40 !h-56"} ></Book>
+                    <Book onClick={() => setOpenBookId(bookList[15].title)} bprops={bookList[15]} classname={"!w-40 !h-56"}></Book>
                     <img src={Ducky} className={"w-36 hidden md:block"} alt={"Rubber Duck"}></img>
                 </Shelf>
                 <Shelf category={'Work/Volunteer Experience'}>
-                    <Book onClick={() => setOpenBookId(bookList[18].title)} bprops={bookList[18]} classname={" !h-[240px] w-40"}></Book>
+                    <Book onClick={() => setOpenBookId(bookList[19].title)} bprops={bookList[19]} classname={" !h-[240px] w-40"}></Book>
                     <div className={"flex flex-row-reverse lg:flex-col flex-wrap justify-end items-center"}>
-                        <Book onClick={() => setOpenBookId(bookList[20].title)} bprops={bookList[20]} style={"spine-side"} classname={" !w-52"}></Book>
-                        <Book onClick={() => setOpenBookId(bookList[16].title)} bprops={bookList[16]} style={"spine-side"} classname={" !w-60 !h-12"}></Book>
-                        <Book onClick={() => setOpenBookId(bookList[17].title)} bprops={bookList[17]} style={"spine-side"} classname={" !w-60 !h-20"}></Book>
+                        <Book onClick={() => setOpenBookId(bookList[21].title)} bprops={bookList[21]} style={"spine-side"} classname={" !w-52"}></Book>
+                        <Book onClick={() => setOpenBookId(bookList[17].title)} bprops={bookList[17]} style={"spine-side"} classname={" !w-60 !h-12"}></Book>
+                        <Book onClick={() => setOpenBookId(bookList[18].title)} bprops={bookList[18]} style={"spine-side"} classname={" !w-60 !h-20"}></Book>
                     </div>
-                    <Book onClick={() => setOpenBookId(bookList[19].title)} bprops={bookList[19]}></Book>{/*DEKES*/}
+                    <Book onClick={() => setOpenBookId(bookList[20].title)} bprops={bookList[20]}></Book>{/*DEKES*/}
 
                     <img src={DuckyFront} className={"w-32 translate-x-4 translate-y-4 hidden md:block"} alt={"Rubber Ducky"}></img>
                 </Shelf>
