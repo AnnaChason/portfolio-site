@@ -92,7 +92,18 @@ const preferredLandingCollage = ['Chicago-7', '20260302-DSCF4460', 'DSCF3500', '
 const curatedLandingCollage = preferredLandingCollage
     .map((name) => findPhotoUrl(name))
     .filter((url): url is string => Boolean(url));
-const landingCollageImages: string[] = [...new Set([...curatedLandingCollage, ...miscImages.filter((u) => u !== landingHeroImage && u !== landingFeatureImage)])].slice(0, 6);
+const landingCollageBase: string[] = [...new Set([...curatedLandingCollage, ...miscImages.filter((u) => u !== landingHeroImage && u !== landingFeatureImage)])].slice(0, 6);
+const landingCollageImages: string[] =
+    landingCollageBase.length === 6
+        ? [
+              landingCollageBase[2],
+              landingCollageBase[1],
+              landingCollageBase[0],
+              landingCollageBase[5],
+              landingCollageBase[4],
+              landingCollageBase[3],
+          ]
+        : landingCollageBase;
 const preferredAboutPortrait = Object.entries(photoModules).find(([path]) =>
     path.replace(/\\/g, '/').includes('/photography/portraits/ACSDOF.jpg'),
 )?.[1];
@@ -144,8 +155,9 @@ function getSectionLabel(project: Project, fileName: string): string {
         return landscapeSections.find((section) => fileName.startsWith(section)) ?? 'Other';
     }
     if (project.slug === 'portraits') {
-        if (fileName.toLowerCase().startsWith('sewing')) {
-            return 'AC';
+        const lowerFileName = fileName.toLowerCase();
+        if (lowerFileName.startsWith('sewing') || lowerFileName.startsWith('ac')) {
+            return 'Chason';
         }
         return portraitSections.find((section) => fileName.toLowerCase().startsWith(section.toLowerCase())) ?? 'Other';
     }
@@ -223,7 +235,13 @@ function AboutPage({ portraitImage }: { portraitImage?: string }) {
     );
 }
 
-function ProjectsHub({ projects, onOpen }: { projects: Project[]; onOpen: (slug: string) => void }) {
+function ProjectsHub({
+    projects,
+    onOpen,
+}: {
+    projects: Project[];
+    onOpen: (slug: string) => void;
+}) {
     return (
         <section className="mx-auto max-w-6xl -mx-2.5 px-2">
             <h2 className="text-3xl font-semibold text-slate-900 md:text-4xl">Projects</h2>
@@ -263,8 +281,17 @@ function ProjectsHub({ projects, onOpen }: { projects: Project[]; onOpen: (slug:
     );
 }
 
-function ProjectPage({ project, onBack }: { project: Project; onBack: () => void }) {
+function ProjectPage({
+    project,
+    onBack,
+    onImageClick,
+}: {
+    project: Project;
+    onBack: () => void;
+    onImageClick: (url: string, gallery?: string[]) => void;
+}) {
     const useSquareGrid = (project.slug === 'TakeMyLifeAndLetItBe' || project.slug === 'TheFlowerFades') && project.images.length === 4;
+    const projectGalleryUrls = project.images.map((image) => image.url);
     const groupedSections =
         project.slug === 'landscapes' || project.slug === 'portraits'
             ? project.images.reduce<Record<string, PhotoAsset[]>>((acc, image) => {
@@ -319,9 +346,10 @@ function ProjectPage({ project, onBack }: { project: Project; onBack: () => void
                                                     <img
                                                         src={image.url}
                                                         alt={`${project.title} photo ${idx + 1}`}
-                                                        className="h-auto w-full object-contain"
+                                                        className="h-auto w-full cursor-zoom-in object-contain"
                                                         loading="lazy"
                                                         decoding="async"
+                                                        onClick={() => onImageClick(image.url, projectGalleryUrls)}
                                                     />
                                                 </figure>
                                             ))}
@@ -333,9 +361,10 @@ function ProjectPage({ project, onBack }: { project: Project; onBack: () => void
                                                     <img
                                                         src={image.url}
                                                         alt={`${project.title} photo ${idx + 1}`}
-                                                        className="h-auto w-full object-contain"
+                                                        className="h-auto w-full cursor-zoom-in object-contain"
                                                         loading="lazy"
                                                         decoding="async"
+                                                        onClick={() => onImageClick(image.url, projectGalleryUrls)}
                                                     />
                                                 </figure>
                                             ))}
@@ -353,9 +382,10 @@ function ProjectPage({ project, onBack }: { project: Project; onBack: () => void
                             <img
                                 src={image.url}
                                 alt={`${project.title} photo ${idx + 1}`}
-                                className="h-auto w-full"
+                                className="h-auto w-full cursor-zoom-in"
                                 loading="lazy"
                                 decoding="async"
+                                onClick={() => onImageClick(image.url, projectGalleryUrls)}
                             />
                         </figure>
                     ))}
@@ -369,9 +399,10 @@ function ProjectPage({ project, onBack }: { project: Project; onBack: () => void
                             <img
                                 src={image.url}
                                 alt={`${project.title} photo ${idx + 1}`}
-                                className="h-auto w-full object-contain"
+                                className="h-auto w-full cursor-zoom-in object-contain"
                                 loading="lazy"
                                 decoding="async"
+                                onClick={() => onImageClick(image.url, projectGalleryUrls)}
                             />
                         </figure>
                     ))}
@@ -383,7 +414,15 @@ function ProjectPage({ project, onBack }: { project: Project; onBack: () => void
     );
 }
 
-function LandingPage({ heroImage, collage }: { heroImage?: string; collage: string[] }) {
+function LandingPage({
+    heroImage,
+    collage,
+    onImageClick,
+}: {
+    heroImage?: string;
+    collage: string[];
+    onImageClick: (url: string, gallery?: string[]) => void;
+}) {
     return (
         <section className="mx-auto max-w-6xl px-2">
             <div className="space-y-6 bg-[#E6EEDF] p-4 md:p-6">
@@ -391,10 +430,11 @@ function LandingPage({ heroImage, collage }: { heroImage?: string; collage: stri
                     <img
                         src={heroImage}
                         alt="Photography hero"
-                        className="max-h-[38rem] w-full object-contain grayscale"
+                        className="max-h-[38rem] w-full cursor-zoom-in object-contain grayscale"
                         loading="eager"
                         decoding="async"
                         fetchPriority="high"
+                        onClick={() => onImageClick(heroImage)}
                     />
                 ) : (
                     <div className="flex h-80 w-full items-center justify-center bg-[#CFE0C6]/60 text-slate-700">Add a hero image in misc</div>
@@ -410,9 +450,10 @@ function LandingPage({ heroImage, collage }: { heroImage?: string; collage: stri
                                 <img
                                     src={image}
                                     alt={`Portfolio highlight ${idx + 1}`}
-                                    className="h-auto w-full object-contain"
+                                    className="h-auto w-full cursor-zoom-in object-contain"
                                     loading="lazy"
                                     decoding="async"
+                                    onClick={() => onImageClick(image)}
                                 />
                             </figure>
                         ))}
@@ -426,9 +467,41 @@ function LandingPage({ heroImage, collage }: { heroImage?: string; collage: stri
 function PhotographyPage() {
     const [view, setView] = useState<View>('landing');
     const [projectsOpen, setProjectsOpen] = useState(false);
+    const [expandedImageUrl, setExpandedImageUrl] = useState<string | null>(null);
+    const [lightboxGallery, setLightboxGallery] = useState<string[]>([]);
+    const [lightboxIndex, setLightboxIndex] = useState(0);
+    const [isLightboxVisible, setIsLightboxVisible] = useState(false);
 
     const activeProject = useMemo(() => photoProjects.find((project) => project.slug === view), [view]);
     const aboutPortrait = preferredAboutPortrait ?? portraitImages[0];
+    const openLightbox = (url: string, gallery?: string[]) => {
+        const galleryImages = gallery && gallery.length > 0 ? gallery : [url];
+        const selectedIndex = galleryImages.indexOf(url);
+        setLightboxGallery(galleryImages);
+        setLightboxIndex(selectedIndex >= 0 ? selectedIndex : 0);
+        setExpandedImageUrl(url);
+        setIsLightboxVisible(true);
+    };
+    const closeLightbox = () => {
+        setIsLightboxVisible(false);
+        window.setTimeout(() => {
+            setExpandedImageUrl(null);
+            setLightboxGallery([]);
+            setLightboxIndex(0);
+        }, 160);
+    };
+    const showPreviousImage = () => {
+        if (lightboxGallery.length < 2) return;
+        const previousIndex = (lightboxIndex - 1 + lightboxGallery.length) % lightboxGallery.length;
+        setLightboxIndex(previousIndex);
+        setExpandedImageUrl(lightboxGallery[previousIndex]);
+    };
+    const showNextImage = () => {
+        if (lightboxGallery.length < 2) return;
+        const nextIndex = (lightboxIndex + 1) % lightboxGallery.length;
+        setLightboxIndex(nextIndex);
+        setExpandedImageUrl(lightboxGallery[nextIndex]);
+    };
 
     return (
         <main className="min-h-screen w-screen bg-[#f4f7ef] px-6 py-16 md:px-10">
@@ -537,13 +610,60 @@ function PhotographyPage() {
 
                 <div>
                     {!activeProject && view === 'landing' && (
-                        <LandingPage heroImage={landingHeroImage} collage={landingCollageImages} />
+                        <LandingPage heroImage={landingHeroImage} collage={landingCollageImages} onImageClick={openLightbox} />
                     )}
                     {!activeProject && view === 'about' && <AboutPage portraitImage={aboutPortrait} />}
-                    {!activeProject && view === 'projects' && <ProjectsHub projects={photoProjects} onOpen={(slug) => setView(slug)} />}
-                    {activeProject && <ProjectPage project={activeProject} onBack={() => setView('projects')} />}
+                    {!activeProject && view === 'projects' && (
+                        <ProjectsHub projects={photoProjects} onOpen={(slug) => setView(slug)} />
+                    )}
+                    {activeProject && <ProjectPage project={activeProject} onBack={() => setView('projects')} onImageClick={openLightbox} />}
                 </div>
             </section>
+            {expandedImageUrl && (
+                <div
+                    className={`fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 transition-opacity duration-150 md:p-8 ${
+                        isLightboxVisible ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    onClick={closeLightbox}
+                    aria-label="Close enlarged image"
+                    role="button"
+                >
+                    {lightboxGallery.length > 1 && (
+                        <button
+                            type="button"
+                            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full border-0 bg-white/80 px-3 py-2 text-xl text-slate-900 hover:bg-white"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                showPreviousImage();
+                            }}
+                            aria-label="Previous image"
+                        >
+                            {'<'}
+                        </button>
+                    )}
+                    <img
+                        src={expandedImageUrl}
+                        alt="Expanded photography view"
+                        className={`max-h-full max-w-full object-contain transition-opacity duration-150 ${
+                            isLightboxVisible ? 'opacity-100' : 'opacity-0'
+                        }`}
+                        onClick={(e) => e.stopPropagation()}
+                    />
+                    {lightboxGallery.length > 1 && (
+                        <button
+                            type="button"
+                            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full border-0 bg-white/80 px-3 py-2 text-xl text-slate-900 hover:bg-white"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                showNextImage();
+                            }}
+                            aria-label="Next image"
+                        >
+                            {'>'}
+                        </button>
+                    )}
+                </div>
+            )}
         </main>
     );
 }
