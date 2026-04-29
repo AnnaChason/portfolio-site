@@ -37,11 +37,15 @@ const titleMap: Record<FolderName, string> = {
 };
 
 const descriptionMap: Record<FolderName, string> = {
-    documentary: 'A documentary series focused on candid moments and story-driven sequences.',
-    landscapes: 'Landscape studies centered on place, light, and atmosphere.',
-    portraits: 'Portrait sessions exploring expression, gesture, and character.',
-    TakeMyLifeAndLetItBe: 'A thematic series built around reflection, symbolism, and visual narrative.',
-    TheFlowerFades: 'A visual sequence exploring change, fragility, and passing time.',
+    documentary:
+        'This documentary focuses on 1 South, the floor where I live in Smith Traber residence halls. I sought to capture various facets of life and community in a dorm and the joys of doing even simple things like studying together.',
+    landscapes:
+        'For this project, I took pictures in 3 different locations: the suburbs of Wheaton, Illinois, Downtown Chicago, and Blackwell Forest Preserve. In the suburbs I focused on the blooming beauty and colors of spring. In Chicago, I wanted to emphasize the enormity of the city and how small a person feels looking out at the sea of skyscrapers. At Blackwell, my focus was on the human traces found in a place that is meant to be so natural.',
+    portraits: "Through this project, I attempted to capture various aspects of my friend's and my personalities and interests.",
+    TakeMyLifeAndLetItBe:
+        'For this project, I was inspired by the hymn "Take My Life and Let it Be Consecrated," which is about dedicating our whole lives to Christ. This means even small chores like washing dishes, folding laundry, or doing homework can be a form of worship.',
+    TheFlowerFades:
+        'In this project, I sought to capture the fleetingness of beauty: no matter how hard we may try to freeze time, the grass withers and the flower fades (Isaiah 40:8).',
 };
 
 const folderOrder: FolderName[] = [
@@ -133,7 +137,7 @@ const photoProjects: Project[] = folderOrder
     });
 
 const landscapeSections = ['Chicago', 'Blackwell', 'SpringSuburbs'] as const;
-const portraitSections = ['Abby', 'AC', 'Lauren'] as const;
+const portraitSections = ['Abby', 'Chason', 'Lauren'] as const;
 
 function getSectionLabel(project: Project, fileName: string): string {
     if (project.slug === 'landscapes') {
@@ -181,8 +185,9 @@ function AboutPage({ portraitImage }: { portraitImage?: string }) {
                     <div>
                         <h2 className="text-xl font-semibold text-slate-800">Artist Statement</h2>
                         <p className="mt-3 max-w-3xl leading-relaxed text-slate-700">
-                            [Artist statement goes here.] Use this space to describe your style, what inspires your work, and the
-                            stories you want your photography to tell.
+                            Hi! My name is Anna Chason Wiggins, and I am a student at Wheaton College taking a Digital
+                            Photography course. I am also a Christian, and my goal in my art is to always reflect Christ and show
+                            the beauty of his creation.
                         </p>
                     </div>
 
@@ -447,7 +452,7 @@ function PhotographyPage() {
                     <div className="relative z-10 px-8 py-10 md:px-14 md:py-16">
                         <p className="text-xs uppercase tracking-[0.4em] text-[#465C3F]">Photography Portfolio</p>
                         <h1 className="mt-4 max-w-4xl text-4xl font-semibold text-slate-900 drop-shadow-sm md:text-6xl">
-                            Light, texture, and story
+                            Anna Chason Wiggins
                         </h1>
                     </div>
                 </div>
