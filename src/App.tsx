@@ -1,11 +1,20 @@
-import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import LibraryPage from './pages/LibraryPage.tsx';
 import PhotographyPage from './pages/PhotographyPage.tsx';
 
 function App() {
     const location = useLocation();
     const navigate = useNavigate();
-    const isPhoto = location.pathname === '/Photography';
+    const normalizedPath = location.pathname.replace(/\/+$/, '').toLowerCase();
+    const isPhoto = /(^|\/)photography(\/|$)/.test(normalizedPath);
+    const goHome = () => {
+        navigate('/');
+        const baseUrl = String(import.meta.env.BASE_URL ?? '/');
+        const baseWithoutSlash = baseUrl.replace(/\/$/, '');
+        if (typeof window !== 'undefined' && window.location.pathname === baseWithoutSlash) {
+            window.history.replaceState(window.history.state, '', baseUrl);
+        }
+    };
 
     return (
         <div className="relative">
@@ -16,7 +25,7 @@ function App() {
                         className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                             !isPhoto ? 'bg-[#B9CFAD] text-[#3E5238]' : 'bg-transparent text-[#3E5238] hover:bg-[#B9CFAD]/50'
                         }`}
-                        onClick={() => navigate('/')}
+                        onClick={goHome}
                     >
                         CS Library
                     </button>
@@ -25,7 +34,7 @@ function App() {
                         className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                             isPhoto ? 'bg-[#B9CFAD] text-[#3E5238]' : 'bg-transparent text-[#3E5238] hover:bg-[#B9CFAD]/50'
                         }`}
-                        onClick={() => navigate('/Photography')}
+                        onClick={() => navigate('/photography')}
                     >
                         Photography
                     </button>
@@ -33,9 +42,7 @@ function App() {
             </header>
 
             <Routes>
-                <Route path="/" element={<LibraryPage />} />
-                <Route path="/Photography" element={<PhotographyPage />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="*" element={isPhoto ? <PhotographyPage /> : <LibraryPage />} />
             </Routes>
         </div>
     );
